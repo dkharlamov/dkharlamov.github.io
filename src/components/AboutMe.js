@@ -3,6 +3,7 @@ import React from 'react'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
 
+import Page from './Page'
 import ProjectCard from './ProjectCard'
 import Content from '../Content'
 
@@ -24,7 +25,14 @@ const TopSection = () => {
       <Typography variant="h6">
         Software Engineer | Web Engineer | Game Developer | Creator
       </Typography>
-      <Paper style={{ maxWidth: 524, padding: 8, marginTop: 32 }}>
+      <Paper
+        style={{
+          maxWidth: 524,
+          padding: 8,
+          marginTop: 32,
+          opacity: 0.75
+        }}
+      >
         {Content.AboutMe.PersonalDescription}
       </Paper>
     </div>
@@ -35,13 +43,16 @@ const BottomSection = () => {
   const styles = {
     display: 'flex',
     flexDirection: 'row',
+    flexWrap: 'wrap',
     justifyContent: 'space-evenly',
     alignItems: 'center',
-    marginTop: 32
+    marginTop: 16,
+    marginBottom: 32
   }
   return (
     <div style={styles}>
       <ProjectCard
+        style={{ marginTop: 16 }}
         image={Content.Images.VRDrive}
         imageTitle={Content.Projects.VRDrive.Card.Title}
         cardTitle={Content.Projects.VRDrive.Card.Title}
@@ -49,6 +60,7 @@ const BottomSection = () => {
         onMore={null}
       />
       <ProjectCard
+        style={{ marginTop: 16 }}
         image={Content.Images.Aircycle}
         imageTitle={Content.Projects.Aircycle.Card.Title}
         cardTitle={Content.Projects.Aircycle.Card.Title}
@@ -56,6 +68,7 @@ const BottomSection = () => {
         onMore={null}
       />
       <ProjectCard
+        style={{ marginTop: 16 }}
         image={Content.Images.TickTockRay}
         imageTitle={Content.Projects.TickTockRay.Card.Title}
         cardTitle={Content.Projects.TickTockRay.Card.Title}
@@ -66,15 +79,11 @@ const BottomSection = () => {
   )
 }
 const AboutMe = () => {
-  const styles = {
-    marginTop: 52,
-    marginLeft: 145
-  }
   return (
-    <div style={styles}>
+    <Page>
       <TopSection />
       <BottomSection />
-    </div>
+    </Page>
   )
 }
 
