@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Page = ({ children, centered }) => {
+const Page = ({ children, centered, marginOverride }) => {
   let styles = {
     marginTop: 52,
-    marginLeft: 145
+    marginLeft: marginOverride || 181
   }
   if (centered) {
     const centering = {

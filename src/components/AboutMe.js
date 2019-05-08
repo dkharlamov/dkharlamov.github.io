@@ -1,5 +1,5 @@
 import React from 'react'
-
+import _ from 'lodash'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
 
@@ -17,6 +17,7 @@ const TopSection = () => {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    textAlign: 'center',
     padding: 128
   }
   return (
@@ -33,13 +34,13 @@ const TopSection = () => {
           opacity: 0.75
         }}
       >
-        {Content.AboutMe.PersonalDescription}
+        <Typography>{Content.AboutMe.PersonalDescription}</Typography>
       </Paper>
     </div>
   )
 }
 
-const BottomSection = () => {
+const BottomSection = ({ onProjectSelect }) => {
   const styles = {
     display: 'flex',
     flexDirection: 'row',
@@ -51,38 +52,26 @@ const BottomSection = () => {
   }
   return (
     <div style={styles}>
-      <ProjectCard
-        style={{ marginTop: 16 }}
-        image={Content.Images.VRDrive}
-        imageTitle={Content.Projects.VRDrive.Card.Title}
-        cardTitle={Content.Projects.VRDrive.Card.Title}
-        cardDescription={Content.Projects.VRDrive.Card.Description}
-        onMore={null}
-      />
-      <ProjectCard
-        style={{ marginTop: 16 }}
-        image={Content.Images.Aircycle}
-        imageTitle={Content.Projects.Aircycle.Card.Title}
-        cardTitle={Content.Projects.Aircycle.Card.Title}
-        cardDescription={Content.Projects.Aircycle.Card.Description}
-        onMore={null}
-      />
-      <ProjectCard
-        style={{ marginTop: 16 }}
-        image={Content.Images.TickTockRay}
-        imageTitle={Content.Projects.TickTockRay.Card.Title}
-        cardTitle={Content.Projects.TickTockRay.Card.Title}
-        cardDescription={Content.Projects.TickTockRay.Card.Description}
-        onMore={null}
-      />
+      {_.map(['VRDrive', 'Aircycle', 'TickTockRay'], (project) => {
+        return (
+          <ProjectCard
+            style={{ marginTop: 16 }}
+            image={Content.Images[project]}
+            imageTitle={Content.Projects[project].Card.Title}
+            cardTitle={Content.Projects[project].Card.Title}
+            cardDescription={Content.Projects[project].Card.Description}
+            onMore={() => onProjectSelect(project)}
+          />
+        )
+      })}
     </div>
   )
 }
-const AboutMe = () => {
+const AboutMe = ({ onProjectSelect }) => {
   return (
     <Page>
       <TopSection />
-      <BottomSection />
+      <BottomSection onProjectSelect={onProjectSelect} />
     </Page>
   )
 }

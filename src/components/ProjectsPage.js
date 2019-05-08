@@ -9,18 +9,19 @@ const ProjectGrid = ({ onProjectSelect }) => {
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
-    justifyContent: 'space-evenly'
+    justifyContent: 'space-evenly',
+    marginBottom: 32
   }
   return (
     <div style={styles}>
       {_.map(Content.ProjectList, (project) => (
         <ProjectCard
           style={{ marginTop: 16 }}
-          image={Content.Images[project]}
-          imageTitle={Content.Projects[project].Card.Title}
-          cardTitle={Content.Projects[project].Card.Title}
-          cardDescription={Content.Projects[project].Card.Description}
-          onMore={() => onProjectSelect(project)}
+          image={Content.Images[project.name]}
+          imageTitle={Content.Projects[project.name].Card.Title}
+          cardTitle={Content.Projects[project.name].Card.Title}
+          cardDescription={Content.Projects[project.name].Card.Description}
+          onMore={() => onProjectSelect(project.name)}
         />
       ))}
     </div>
@@ -29,7 +30,7 @@ const ProjectGrid = ({ onProjectSelect }) => {
 
 const ProjectsPage = ({ onProjectSelect }) => {
   return (
-    <Page centered>
+    <Page marginOverride={186} centered>
       <ProjectGrid onProjectSelect={onProjectSelect} />
     </Page>
   )
