@@ -11,6 +11,9 @@ import VRDrivePosterImage from './static/images/vrd.png'
 import AircyclePosterImage from './static/images/airposter.png'
 import TickTockRayPosterImage from './static/images/postersui.png'
 import EPortfolioImage from './static/images/site.png'
+import ClamParkP1Image from './static/images/Picture2.jpg'
+import ClamParkP2Image from './static/images/Picture3.png'
+import ClamParkP3Image from './static/images/Picture4.png'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
@@ -174,6 +177,13 @@ export default {
         Title: 'ClamPark',
         Description:
           'Group project from Computer Architecture course where we designed and built parking management hardware.'
+      },
+      DetailsPage: {
+        Left: [ createSection('Brief', 'ClamParking is a self-sustained parking detector that can detect if a vehicle is parked on a parking spot. It is meant to reduce traffic during passing periods at my university and to make finding parking a safer experience. My team and I designed, built, and integrated ClamParking to reduce the hassles and dangers of looking for parking in the middle of the school day. With ClamParking, we aimed to solve many campus safety issues as well as get people to class on time.'), createImage('ClamPark Finished Prototype', ClamParkP1Image) ],
+        Right: [
+          createImage('ClamPark Model', ClamParkP3Image),
+          createImage('ClamPark Drawing', ClamParkP2Image)
+        ]
       }
     },
     GameJam: {
@@ -181,6 +191,12 @@ export default {
         Title: 'GameJam Framework',
         Description:
           'Worked with a colleague to develop a virtual reality framework for teaching students how to make VR games in a limited time period.'
+      },
+      DetailsPage: {
+        Left: [ createSection('Brief', 'I worked with a colleague to write a framework to help teach students about developing virtual reality games in the Unity Engine. This framework aimed and succeeded at making it easy for students to create a virtual reality game in a week. During the Game Jam, I helped students solve problems with the Unity Engine, general virtual reality concepts, and sometimes issues with art assets and the implementation of game features.') ],
+        Right: [
+          createImage('VR Headset', GameJamImage)
+        ]
       }
     },
     Lift: {

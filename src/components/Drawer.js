@@ -5,7 +5,6 @@ import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
 import Content from '../Content'
-import { ListItemIcon } from '@material-ui/core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const ProjectsDrawer = ({ isOpen, onProjectSelect }) => {

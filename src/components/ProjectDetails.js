@@ -34,11 +34,13 @@ const Panel = ({ project, side }) => {
             return <SubSection content={section.content} />
           case 'Image':
             return (
+              <div style={{ width: '100%', textAlign: 'center', marginBottom: 16 }} >
               <img
-                style={{ width: 'inherit' }}
+                style={{ maxWidth: 750, borderRadius: 4, boxShadow: '0px 0px 8px 0px rgba(0,0,0,0.75)' }}
                 alt={section.title}
                 src={section.src}
               />
+              </div>
             )
           case 'Link':
             return (

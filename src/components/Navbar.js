@@ -14,7 +14,6 @@ const Left = () => {
     </Typography>
   )
 }
-
 const Right = () => {
   const styles = {
     display: 'flex',
@@ -23,9 +22,8 @@ const Right = () => {
   }
   return (
     <div style={styles}>
-      <Button>About Me</Button>
-      <Button>Projects</Button>
-      <Button>Resume</Button>
+      <Button href="https://www.linkedin.com/in/daniel-kharlamov-959448a0/" target="_blank">LinkedIn</Button>
+      <Button href="https://github.com/dkharlamov" target="_blank">GitHub</Button>
     </div>
   )
 }

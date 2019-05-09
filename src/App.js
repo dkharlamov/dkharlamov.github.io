@@ -26,7 +26,9 @@ const App = () => {
       VRDrive: <ProjectDetails project={'VRDrive'} />,
       Aircycle: <ProjectDetails project={'Aircycle'} />,
       TickTockRay: <ProjectDetails project={'TickTockRay'} />,
-      EPortfolio: <ProjectDetails project={'EPortfolio'} />
+      EPortfolio: <ProjectDetails project={'EPortfolio'} />,
+      ClamPark: <ProjectDetails project={'ClamPark'} />,
+      GameJam: <ProjectDetails project={'GameJam'} />,
     }
   }
 

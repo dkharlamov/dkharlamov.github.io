@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.adf9e5ed.chunk.css",
+    "main.js": "/static/js/main.c9445609.chunk.js",
+    "main.js.map": "/static/js/main.c9445609.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.3d862dd9.chunk.js": "/static/js/2.3d862dd9.chunk.js",
+    "static/js/2.3d862dd9.chunk.js.map": "/static/js/2.3d862dd9.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.4d88a631a447f05cd5af2a4c88169dbe.js": "/precache-manifest.4d88a631a447f05cd5af2a4c88169dbe.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.adf9e5ed.chunk.css.map": "/static/css/main.adf9e5ed.chunk.css.map",
+    "static/media/CST426VRDRIVE.png": "/static/media/CST426VRDRIVE.da337615.png",
+    "static/media/Picture2.jpg": "/static/media/Picture2.eb039e97.jpg",
+    "static/media/Picture3.png": "/static/media/Picture3.f319d167.png",
+    "static/media/Picture4.png": "/static/media/Picture4.38e78ffd.png",
+    "static/media/aircycle.png": "/static/media/aircycle.559b9ab2.png",
+    "static/media/airposter.png": "/static/media/airposter.ee4ee784.png",
+    "static/media/bike.jpg": "/static/media/bike.98432713.jpg",
+    "static/media/clampark.jpg": "/static/media/clampark.60fe8edc.jpg",
+    "static/media/dkharlamov19resume.pdf": "/static/media/dkharlamov19resume.5fac8901.pdf",
+    "static/media/forceout.png": "/static/media/forceout.5a8355e2.png",
+    "static/media/lift.png": "/static/media/lift.e1ce306a.png",
+    "static/media/postersui.png": "/static/media/postersui.8cff08ac.png",
+    "static/media/robotic_arm.jpg": "/static/media/robotic_arm.7572f4fd.jpg",
+    "static/media/site.png": "/static/media/site.e2b8ab3d.png",
+    "static/media/ticktock.png": "/static/media/ticktock.02aea4fe.png",
+    "static/media/vrd.png": "/static/media/vrd.9816518d.png",
+    "static/media/vrgj.jpg": "/static/media/vrgj.b2b3b854.jpg"
+  }
+}
