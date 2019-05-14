@@ -22,6 +22,7 @@ const App = () => {
     'About Me': <AboutMe onProjectSelect={handleSetProject} />,
     Projects: <ProjectsPage onProjectSelect={handleSetProject} />,
     Resume: <ResumePage />,
+    // 'L-System Viewer': <LSystemViewer />,
     ProjectPages: {
       VRDrive: <ProjectDetails project={'VRDrive'} />,
       Aircycle: <ProjectDetails project={'Aircycle'} />,
@@ -29,15 +30,26 @@ const App = () => {
       EPortfolio: <ProjectDetails project={'EPortfolio'} />,
       ClamPark: <ProjectDetails project={'ClamPark'} />,
       GameJam: <ProjectDetails project={'GameJam'} />,
+      Lift: <ProjectDetails project={'Lift'} />,
+      RoboticArm: <ProjectDetails project={'RoboticArm'} />,
+      DX11: <ProjectDetails project={'DX11'} />
     }
   }
+  console.log(page, Pages[page])
 
   const styles = {}
+  const hasProject = page.includes('ProjectPages')
   return (
     <MuiThemeProvider theme={Theme}>
       <div style={styles}>
         <Navbar />
-        <Drawer onPageSelect={setPage} onProjectSelect={handleSetProject} />
+        <Drawer
+          key={page}
+          currentPage={hasProject ? 'Projects' : page}
+          currentProject={hasProject ? page.substr(13, page.length) : ''}
+          onPageSelect={setPage}
+          onProjectSelect={handleSetProject}
+        />
         {_.get(Pages, page)}
       </div>
     </MuiThemeProvider>

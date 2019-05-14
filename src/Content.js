@@ -14,6 +14,9 @@ import EPortfolioImage from './static/images/site.png'
 import ClamParkP1Image from './static/images/Picture2.jpg'
 import ClamParkP2Image from './static/images/Picture3.png'
 import ClamParkP3Image from './static/images/Picture4.png'
+import SiteTechImage from './static/images/sitetech.png'
+import SimpleTerrainImage from './static/images/simple_terrain.png'
+import SimpleFPSImage from './static/images/simple_fps.png'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
@@ -82,6 +85,7 @@ export default {
       icon: 'project-diagram'
     },
     Resume: { name: 'Resume', icon: 'file-alt' }
+    // LSystem: { name: 'L-System Viewer', icon: 'file-alt' }
   },
   ProjectList: {
     EPortfolio: { name: 'EPortfolio', icon: ['fab', 'react'] },
@@ -116,7 +120,7 @@ export default {
             'https://github.com/dkharlamov/dkharlamov.github.io'
           )
         ],
-        Right: []
+        Right: [createImage('Site Technologies', SiteTechImage)]
       }
     },
     VRDrive: {
@@ -167,6 +171,10 @@ export default {
           createLink(
             'ACM Link',
             'https://dl.acm.org/author_page.cfm?id=99659076440&coll=DL&dl=ACM&trk=0'
+          ),
+          createLink(
+            'Github',
+            'https://github.com/gameresearchlab/TickTockRayPlugin'
           )
         ],
         Right: [createImage('TickTockRay Poster', TickTockRayPosterImage)]
@@ -179,7 +187,13 @@ export default {
           'Group project from Computer Architecture course where we designed and built parking management hardware.'
       },
       DetailsPage: {
-        Left: [ createSection('Brief', 'ClamParking is a self-sustained parking detector that can detect if a vehicle is parked on a parking spot. It is meant to reduce traffic during passing periods at my university and to make finding parking a safer experience. My team and I designed, built, and integrated ClamParking to reduce the hassles and dangers of looking for parking in the middle of the school day. With ClamParking, we aimed to solve many campus safety issues as well as get people to class on time.'), createImage('ClamPark Finished Prototype', ClamParkP1Image) ],
+        Left: [
+          createSection(
+            'Brief',
+            'ClamParking is a self-sustained parking detector that can detect if a vehicle is parked on a parking spot. It is meant to reduce traffic during passing periods at my university and to make finding parking a safer experience. My team and I designed, built, and integrated ClamParking to reduce the hassles and dangers of looking for parking in the middle of the school day. With ClamParking, we aimed to solve many campus safety issues as well as get people to class on time.'
+          ),
+          createImage('ClamPark Finished Prototype', ClamParkP1Image)
+        ],
         Right: [
           createImage('ClamPark Model', ClamParkP3Image),
           createImage('ClamPark Drawing', ClamParkP2Image)
@@ -193,10 +207,13 @@ export default {
           'Worked with a colleague to develop a virtual reality framework for teaching students how to make VR games in a limited time period.'
       },
       DetailsPage: {
-        Left: [ createSection('Brief', 'I worked with a colleague to write a framework to help teach students about developing virtual reality games in the Unity Engine. This framework aimed and succeeded at making it easy for students to create a virtual reality game in a week. During the Game Jam, I helped students solve problems with the Unity Engine, general virtual reality concepts, and sometimes issues with art assets and the implementation of game features.') ],
-        Right: [
-          createImage('VR Headset', GameJamImage)
-        ]
+        Left: [
+          createSection(
+            'Brief',
+            'I worked with a colleague to write a framework to help teach students about developing virtual reality games in the Unity Engine. This framework aimed and succeeded at making it easy for students to create a virtual reality game in a week. During the Game Jam, I helped students solve problems with the Unity Engine, general virtual reality concepts, and sometimes issues with art assets and the implementation of game features.'
+          )
+        ],
+        Right: [createImage('VR Headset', GameJamImage)]
       }
     },
     Lift: {
@@ -204,6 +221,15 @@ export default {
         Title: 'Lift Simulation',
         Description:
           'Worked with a research mentor to research areodynamic lift simulation methods.'
+      },
+      DetailsPage: {
+        Left: [
+          createSection(
+            'Brief',
+            'While working with a Research Mentor who developed a model for aerodynamic lift and drag simulation, I implemented physical models into a simulation based in DirectX11. This simulation utilized deferred rendering and compute shaders to calculate singular air particles interacting with an airfoil’s surface. This approach relied on a model that increase resolution with decreased time slices over a mesh.'
+          )
+        ],
+        Right: [createImage('Lift Simulation Screenshot', LiftSimulationImage)]
       }
     },
     RoboticArm: {
@@ -211,6 +237,15 @@ export default {
         Title: 'Robotic Arm',
         Description:
           'Worked with a research group to develop a 3D printed robotic arm to design a solution for low cost prosthetics.'
+      },
+      DetailsPage: {
+        Left: [
+          createSection(
+            'Brief',
+            'Worked with a group of fellow researchers to develop a low-cost solution for arm prosthetics that could be 3D printed. I worked on developing sensors that would detect minute muscle movements in a patient’s arm that would control the servos inside the prosthesis. By using a simple op-amp array and Arduino data visualization and processing, I helped to develop an easily adjustable model for muscle movement detection using flex sensors.'
+          )
+        ],
+        Right: [createImage('Robotic Arm Circuitry', RoboticArmImage)]
       }
     },
     DX11: {
@@ -218,6 +253,20 @@ export default {
         Title: 'DirectX11 Projects',
         Description:
           'A variety of DirectX projects I made in my Graphics Programming class. I also talk about my Teaching Assistant experience here!'
+      },
+      DetailsPage: {
+        Left: [
+          createSection(
+            'Brief',
+            'These are some of my early DirectX11 projects from my Graphics Programming course. You can look at the code for these on my GitHub profile.'
+          ),
+          createLink('Github', 'https://github.com/dkharlamov?tab=repositories')
+        ],
+        Right: [
+          createImage('ForceOut DirectX11 Project', ForceOutImage),
+          createImage('Simple DirectX11 Terrain', SimpleTerrainImage),
+          createImage('Simple DirectX11 FPS', SimpleFPSImage)
+        ]
       }
     }
   },

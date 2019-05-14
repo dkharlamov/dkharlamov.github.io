@@ -7,7 +7,14 @@ import ListItemText from '@material-ui/core/ListItemText'
 import Content from '../Content'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const ProjectsDrawer = ({ isOpen, onProjectSelect }) => {
+const ProjectsDrawer = ({ isOpen, onProjectSelect, currentProject }) => {
+  const [selected, setSelected] = useState(currentProject)
+
+  const handleProjectSelect = (project) => {
+    setSelected(project)
+    onProjectSelect(project)
+  }
+
   const styles = {
     backgroundColor: '#EEE',
     boxShadow: 'inset 0px 4px 8px -6px #000, inset 0px -4px 8px -6px #000'
@@ -17,7 +24,8 @@ const ProjectsDrawer = ({ isOpen, onProjectSelect }) => {
       {_.map(Content.ProjectList, (project, index) => (
         <ListItem
           button
-          onClick={() => onProjectSelect(project.name)}
+          onClick={() => handleProjectSelect(project.name)}
+          selected={project.name === selected}
           key={project.name}
         >
           <FontAwesomeIcon icon={project.icon} fixedWidth />
@@ -28,8 +36,10 @@ const ProjectsDrawer = ({ isOpen, onProjectSelect }) => {
   )
 }
 
-const Drawer = ({ onPageSelect, onProjectSelect }) => {
-  const [selected, setSelected] = useState('About Me')
+const Drawer = ({ onPageSelect, onProjectSelect, currentPage, currentProject }) => {
+  const [selected, setSelected] = useState(currentPage)
+  // updator required to remount the imbeded drawer correctly
+  const [updator, incrementUpdator] = useState(0)
   const styles = {
     minWidth: 96
   }
@@ -40,6 +50,7 @@ const Drawer = ({ onPageSelect, onProjectSelect }) => {
   const handlePageSelect = (page) => {
     setSelected(page)
     onPageSelect(page)
+    incrementUpdator(updator + 1)
   }
 
   return (
@@ -60,13 +71,13 @@ const Drawer = ({ onPageSelect, onProjectSelect }) => {
           )
           if (page.name === 'Projects' && page.name === selected) {
             return (
-              <div>
+              <div key={page.name}>
                 <Item />
-                <ProjectsDrawer onProjectSelect={onProjectSelect} />
+                <ProjectsDrawer key={updator} currentProject={currentProject} onProjectSelect={onProjectSelect} />
               </div>
             )
           }
-          return <Item />
+          return <Item  key={page.name}/>
         })}
       </List>
     </DrawerMUI>

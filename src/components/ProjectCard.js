@@ -43,7 +43,7 @@ const ProjectCard = ({
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button onClick={onMore} size="small" color="primary">
+        <Button onClick={onMore} size="small" color="secondary">
           See More
         </Button>
       </CardActions>

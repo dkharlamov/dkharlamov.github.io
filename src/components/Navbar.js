@@ -9,7 +9,7 @@ const Left = () => {
     marginLeft: 16
   }
   return (
-    <Typography variant="h5" style={styles}>
+    <Typography variant="h5" color="textSecondary" style={styles}>
       Daniel Kharlamov
     </Typography>
   )
@@ -22,8 +22,23 @@ const Right = () => {
   }
   return (
     <div style={styles}>
-      <Button href="https://www.linkedin.com/in/daniel-kharlamov-959448a0/" target="_blank">LinkedIn</Button>
-      <Button href="https://github.com/dkharlamov" target="_blank">GitHub</Button>
+      <Button
+        style={{ marginRight: 8 }}
+        href="https://www.linkedin.com/in/khar/"
+        color="secondary"
+        variant="contained"
+        target="_blank"
+      >
+        LinkedIn
+      </Button>
+      <Button
+        color="secondary"
+        variant="contained"
+        href="https://github.com/dkharlamov"
+        target="_blank"
+      >
+        GitHub
+      </Button>
     </div>
   )
 }
@@ -34,11 +49,12 @@ const Navbar = () => {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: 'white',
+    // backgroundColor: 'white',
+    color: '#eeecec',
     zIndex: 1201
   }
   return (
-    <AppBar style={styles}>
+    <AppBar color="primary" style={styles}>
       <Left />
       <Right />
     </AppBar>

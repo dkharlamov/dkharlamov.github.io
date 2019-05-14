@@ -16,6 +16,7 @@ const ProjectGrid = ({ onProjectSelect }) => {
     <div style={styles}>
       {_.map(Content.ProjectList, (project) => (
         <ProjectCard
+          key={project.name}
           style={{ marginTop: 16 }}
           image={Content.Images[project.name]}
           imageTitle={Content.Projects[project.name].Card.Title}

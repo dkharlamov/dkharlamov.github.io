@@ -26,33 +26,55 @@ const Panel = ({ project, side }) => {
   const styles = { width: '100%', paddingLeft: 16, paddingRight: 16 }
   return (
     <div style={styles}>
-      {_.map(Content.Projects[project].DetailsPage[side], (section) => {
+      {_.map(Content.Projects[project].DetailsPage[side], (section, idx) => {
         switch (section.type) {
           case 'Section':
-            return <Section title={section.title} content={section.content} />
+            return (
+              <Section
+                key={`${side}-${idx}`}
+                title={section.title}
+                content={section.content}
+              />
+            )
           case 'SubSection':
-            return <SubSection content={section.content} />
+            return (
+              <SubSection key={`${side}-${idx}`} content={section.content} />
+            )
           case 'Image':
             return (
-              <div style={{ width: '100%', textAlign: 'center', marginBottom: 16 }} >
-              <img
-                style={{ maxWidth: 750, borderRadius: 4, boxShadow: '0px 0px 8px 0px rgba(0,0,0,0.75)' }}
-                alt={section.title}
-                src={section.src}
-              />
+              <div
+                key={`${side}-${idx}`}
+                style={{ width: '100%', textAlign: 'center', marginBottom: 16 }}
+              >
+                <img
+                  style={{
+                    maxWidth: 750,
+                    borderRadius: 4,
+                    boxShadow: '0px 0px 8px 0px rgba(0,0,0,0.75)'
+                  }}
+                  alt={section.title}
+                  src={section.src}
+                />
               </div>
             )
           case 'Link':
             return (
               <div
+                key={`${side}-${idx}`}
                 style={{
                   display: 'flex',
                   flexDirection: 'row',
-                  alignItems: 'center'
+                  alignItems: 'center',
+                  marginBottom: 16
                 }}
               >
                 <hr style={{ width: '25%', height: 2 }} />
-                <Button variant="contained" href={section.url} target="_blank">
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  href={section.url}
+                  target="_blank"
+                >
                   {section.title}
                 </Button>
                 <hr style={{ width: '25%', height: 2 }} />

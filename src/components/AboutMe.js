@@ -34,7 +34,9 @@ const TopSection = () => {
           opacity: 0.75
         }}
       >
-        <Typography>{Content.AboutMe.PersonalDescription}</Typography>
+        <Typography variant="body2">
+          {Content.AboutMe.PersonalDescription}
+        </Typography>
       </Paper>
     </div>
   )
@@ -55,6 +57,7 @@ const BottomSection = ({ onProjectSelect }) => {
       {_.map(['VRDrive', 'Aircycle', 'TickTockRay'], (project) => {
         return (
           <ProjectCard
+            key={project}
             style={{ marginTop: 16 }}
             image={Content.Images[project]}
             imageTitle={Content.Projects[project].Card.Title}
