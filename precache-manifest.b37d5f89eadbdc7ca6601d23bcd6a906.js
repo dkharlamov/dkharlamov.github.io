@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "56cb36aef5c9fa207b5593650d276b97",
+    "revision": "b0cc9e3cdc2cc1466b5b01f986a07c90",
     "url": "/index.html"
   },
   {
-    "revision": "5d821429558e7618561f",
-    "url": "/static/css/main.adf9e5ed.chunk.css"
+    "revision": "20a7615dbfd0c5603d08",
+    "url": "/static/css/main.81f0507e.chunk.css"
   },
   {
-    "revision": "9611a5717c60b2410d6d",
-    "url": "/static/js/2.3d862dd9.chunk.js"
+    "revision": "eabf442cbf9b1ea0f205",
+    "url": "/static/js/2.8a9e7bd7.chunk.js"
   },
   {
-    "revision": "5d821429558e7618561f",
-    "url": "/static/js/main.c9445609.chunk.js"
+    "revision": "20a7615dbfd0c5603d08",
+    "url": "/static/js/main.474f0c47.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -52,8 +52,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/clampark.60fe8edc.jpg"
   },
   {
-    "revision": "5fac89019c5b50f3408f70832080e3d8",
-    "url": "/static/media/dkharlamov19resume.5fac8901.pdf"
+    "revision": "f2a89bc7fe3df0dd69b1207530e60016",
+    "url": "/static/media/dkharlamov19resume.f2a89bc7.pdf"
   },
   {
     "revision": "5a8355e259ddcef375530f42e2a2c283",
@@ -72,8 +72,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/robotic_arm.7572f4fd.jpg"
   },
   {
+    "revision": "be3c32c5fe56a03e16d5f5916b989b34",
+    "url": "/static/media/simple_fps.be3c32c5.png"
+  },
+  {
+    "revision": "26525db2316e26b0945c1b9ce302e0ed",
+    "url": "/static/media/simple_terrain.26525db2.png"
+  },
+  {
     "revision": "e2b8ab3d6e35d8c46455cdca2d0a80a1",
     "url": "/static/media/site.e2b8ab3d.png"
+  },
+  {
+    "revision": "f88a7a497de0c782ba65ba3f7ba8836a",
+    "url": "/static/media/sitetech.f88a7a49.png"
   },
   {
     "revision": "02aea4fe9fe7aa16959c3cbd2156bcd7",
