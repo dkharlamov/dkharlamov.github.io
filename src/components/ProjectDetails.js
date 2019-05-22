@@ -57,6 +57,23 @@ const Panel = ({ project, side }) => {
                 />
               </div>
             )
+          case 'Thumbnail':
+            return (
+              <div
+                key={`${side}-${idx}`}
+                style={{ width: '100%', textAlign: 'center', marginBottom: 16 }}
+              >
+                <img
+                  style={{
+                    maxWidth: 400,
+                    borderRadius: 4,
+                    boxShadow: '0px 0px 8px 0px rgba(0,0,0,0.75)'
+                  }}
+                  alt={section.title}
+                  src={section.src}
+                />
+              </div>
+            )
           case 'Link':
             return (
               <div

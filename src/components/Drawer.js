@@ -36,7 +36,12 @@ const ProjectsDrawer = ({ isOpen, onProjectSelect, currentProject }) => {
   )
 }
 
-const Drawer = ({ onPageSelect, onProjectSelect, currentPage, currentProject }) => {
+const Drawer = ({
+  onPageSelect,
+  onProjectSelect,
+  currentPage,
+  currentProject
+}) => {
   const [selected, setSelected] = useState(currentPage)
   // updator required to remount the imbeded drawer correctly
   const [updator, incrementUpdator] = useState(0)
@@ -73,11 +78,15 @@ const Drawer = ({ onPageSelect, onProjectSelect, currentPage, currentProject }) 
             return (
               <div key={page.name}>
                 <Item />
-                <ProjectsDrawer key={updator} currentProject={currentProject} onProjectSelect={onProjectSelect} />
+                <ProjectsDrawer
+                  key={updator}
+                  currentProject={currentProject}
+                  onProjectSelect={onProjectSelect}
+                />
               </div>
             )
           }
-          return <Item  key={page.name}/>
+          return <Item key={page.name} />
         })}
       </List>
     </DrawerMUI>

@@ -32,7 +32,8 @@ const App = () => {
       GameJam: <ProjectDetails project={'GameJam'} />,
       Lift: <ProjectDetails project={'Lift'} />,
       RoboticArm: <ProjectDetails project={'RoboticArm'} />,
-      DX11: <ProjectDetails project={'DX11'} />
+      DX11: <ProjectDetails project={'DX11'} />,
+      Capstone: <ProjectDetails project={'Capstone'} />
     }
   }
   console.log(page, Pages[page])
